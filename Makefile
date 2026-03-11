@@ -1,4 +1,7 @@
-.PHONY: test
+.PHONY: test lint
 
 test:
-	pytest -q
+	uv run pytest -q
+
+lint:
+	uv run ruff check .
